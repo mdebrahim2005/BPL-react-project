@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "rating": 9.5,
+    "batStyle": "Left-Hand Bat",
+    "price": 120000,
+    "img": "https://i.ibb.co.com/YBhhn31t/sakib.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Virat Kohli",
+    "country": "India",
+    "rating": 9.8,
+    "batStyle": "Right-Hand Bat",
+    "price": 150000,
+    "img": "https://i.ibb.co.com/G4RpzgCM/virat.avif"
+  },
+  {
+    "id": 3,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "rating": 9.7,
+    "batStyle": "Right-Hand Bat",
+    "price": 145000,
+    "img": "https://i.ibb.co.com/xqP8P44X/babar.jpg"
+  },
+  {
+    "id": 4,
+    "name": "David Warner",
+    "country": "Australia",
+    "rating": 9.3,
+    "batStyle": "Left-Hand Bat",
+    "price": 130000,
+    "img": "https://i.ibb.co.com/k6HvB6FK/im-David-Warner.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Ben Stokes",
+    "country": "England",
+    "rating": 9.4,
+    "batStyle": "Left-Hand Bat",
+    "price": 140000,
+    "img": "https://i.ibb.co.com/5gp7kQDt/Ben-Stokes.webp"
+  },
+  {
+    "id": 6,
+    "name": "Quinton de Kock",
+    "country": "South Africa",
+    "rating": 9.2,
+    "batStyle": "Left-Hand Bat",
+    "price": 125000,
+    "img": "https://i.ibb.co.com/6Rh3r5SV/Quinton-de-Kock.webp"
+  },
+  {
+    "id": 7,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "rating": 9.6,
+    "batStyle": "Right-Hand Bat",
+    "price": 142000,
+    "img": "https://i.ibb.co.com/Z6W8kK6k/Kane-Williamson.avif"
+  },
+  {
+    "id": 8,
+    "name": "Rohit Sharma",
+    "country": "India",
+    "rating": 9.5,
+    "batStyle": "Right-Hand Bat",
+    "price": 148000,
+    "img": "https://i.ibb.co.com/WNxgcmjn/Rohit-Sharma.avif"
+  },
+  {
+    "id": 9,
+    "name": "Jos Buttler",
+    "country": "England",
+    "rating": 9.4,
+    "batStyle": "Right-Hand Bat",
+    "price": 138000,
+    "img": "https://i.ibb.co.com/1G5zf4Lf/Jos-Buttler.webp"
+  },
+  {
+    "id": 10,
+    "name": "Travis Head",
+    "country": "Australia",
+    "rating": 9.1,
+    "batStyle": "Left-Hand Bat",
+    "price": 127000,
+    "img": "https://i.ibb.co.com/hb5kWph/Travis-Head.avif"
+  },
+  {
+    "id": 11,
+    "name": "Hardik Pandya",
+    "country": "India",
+    "rating": 9.3,
+    "batStyle": "Right-Hand Bat",
+    "price": 135000,
+    "img": "https://i.ibb.co.com/fd29R9Gk/Hardik-Pandya.avif"
+  },
+  {
+    "id": 12,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "rating": 9.7,
+    "batStyle": "Right-Hand Bat",
+    "price": 146000,
+    "img": "https://i.ibb.co.com/SXKGYCbT/Rashid-Khan.webp"
+  }
+]
