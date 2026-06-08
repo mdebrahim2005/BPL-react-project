@@ -1,7 +1,7 @@
 
 import Currency from "../assets/Currency.png";
 import Group from "../assets/Group.png";
- const Navber = () => {
+ const Navber = ({coin}) => {
     return (
         <div className='container mx-auto mb-6' >
             <div className="navbar bg-base-100 shadow-sm ">
@@ -19,7 +19,7 @@ import Group from "../assets/Group.png";
   <div className="flex-none">
     
 
-    <button className="btn btn-soft text-xl text-black font-bold ">0 Coin
+    <button className="btn btn-soft text-xl text-black font-bold ">{coin} Coin
       <img src={Currency} alt="Coin Icon" className="w-6 h-6" /> </button>
        
 

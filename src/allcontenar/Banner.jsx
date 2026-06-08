@@ -5,8 +5,8 @@ const Banner = () => {
     return (
 
         <div>
-            <div className="hero  min-h-[50vh] rounded-3xl overflow-hidden bg-[#131313] bg-cover bg-center bg-no-repeat  container mx-auto 
-             bg-center bg-no-repeat rounded-2xl overflow-hidden "
+            <div className="hero  min-h-[50vh] rounded-3xl bg-[#131313] bg-cover 
+            bg-center bg-no-repeat  container mx-auto  overflow-hidden "
            style={{ backgroundImage: `url(${bg})` }}
 
 >
