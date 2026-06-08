@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Selected from './Selected';
 import Player from './player';
 
-const AvilBtn = ({playerpromis,selectedPlayers,setCoin,}) => {
+const AvilBtn = ({playerpromis,selectedPlayers,setCoin,coin}) => {
     const[selecte,setselecte]=useState("Available")
     return (
         <div> 
