@@ -8,7 +8,7 @@ import Group from "../assets/Group.png";
   <div className="flex-1">
    <img src={Group} alt="logo" className="h-14 w-auto" />
   </div>
-<div className="mr-10" >
+<div className="mr-10 hidden md:flex" >
       <ul className="gap-8 flex">
         <li>Home</li>
         <li>Fixture</li>

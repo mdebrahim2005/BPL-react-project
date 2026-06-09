@@ -10,7 +10,7 @@ const AvilBtn = ({playerpromis,selectedPlayers,setCoin,coin}) => {
     return (
         <div> 
             <div className='container mx-auto mt-10 flex justify-between  '>
-                 <div className='text-2xl font-bold'>
+                 <div className='text-xl md:text-2xl font-bold text-center md:text-left'>
                     {selecte === "Available" ?
                     <h1 className='font-bold text-2xl'>
                         Available Players
