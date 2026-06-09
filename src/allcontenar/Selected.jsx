@@ -31,6 +31,7 @@ const Selected = ({ selectedplayers, setselectedplayers, setselecte,coin,setCoin
                                         <h1 className='flex items-center gap-2 font-bold text-2xl'> 
                                             <FaUser /> {playeres.name}
                                         </h1>
+                                        <p className='text-gray-400'> {playeres.batStyle}</p>
                                     </div>
                                 </div>
                                 <button 

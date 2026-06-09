@@ -38,7 +38,7 @@ const Card = ({player, setCoin,coin ,selectedPlayers, selectedplayers,setselecte
         <div>
                          
                          
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card w-full max-w-sm mx-auto bg-base-100  shadow-sm">
           <figure>
          <img
       src={player.img}
@@ -71,7 +71,7 @@ const Card = ({player, setCoin,coin ,selectedPlayers, selectedplayers,setselecte
       <div className="card-actions ">
           <p className='text-base font-bold '>price:${player.price}</p>
       <button onClick={handleplayer} disabled ={isAlreadySelected}
-       className={`btn h-9 ${isAlreadySelected ? "bg-gray-400 text-white" : ""}`}>
+       className={`btn h-9 ${isAlreadySelected ? "bg-gray-400 text-white" : "bg-[#E7FE29] text-black hover:bg-[#d4eb25"}`}>
         {isAlreadySelected ? "Selected" : "Choose Player"}  </button>
     </div>
   </div>
