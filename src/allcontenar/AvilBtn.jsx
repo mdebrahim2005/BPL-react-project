@@ -1,17 +1,26 @@
-import React, { useState } from 'react'; 
+import React, { use, useState } from 'react'; 
 import Selected from './Selected';
 import Player from './player';
 
 const AvilBtn = ({playerpromis,selectedPlayers,setCoin,coin}) => {
+    const pla = use(playerpromis)
+    console.log(pla)
     const[selecte,setselecte]=useState("Available")
+        const [selectedplayers , setselectedplayers] =useState([]);
     return (
         <div> 
             <div className='container mx-auto mt-10 flex justify-between  '>
-                 <h1 className='text-2xl font-bold'>
-                    {selecte === "Available" ? "Available Players" :
-                     `Selected Players (${selectedPlayers.length})`}
+                 <div className='text-2xl font-bold'>
+                    {selecte === "Available" ?
+                    <h1 className='font-bold text-2xl'>
+                        Available Players
+                    </h1>  :
+                    <h1>
+                         Selected Players ({selectedplayers.length}/{pla.length})
+                    </h1>
+                    }
 
-                 </h1>
+                 </div>
 
                 <div className=''>
                     <button onClick={()=> setselecte("Available")}
@@ -19,7 +28,7 @@ const AvilBtn = ({playerpromis,selectedPlayers,setCoin,coin}) => {
                     rounded-l-xl font-semibold`}>Available</button>
                     <button  onClick={()=> setselecte("Selected")}
                      className={`btn btn-soft  ${selecte==="Selected"?"bg-[#E7FE29]" :"bg-red-500"}
-                    rounded-l-xl font-semibold`}>Selected (0)</button>
+                    rounded-l-xl font-semibold`}>Selected ({selectedplayers.length})</button>
 
                 </div>
             </div>
@@ -31,10 +40,17 @@ const AvilBtn = ({playerpromis,selectedPlayers,setCoin,coin}) => {
                           setCoin={setCoin}
                           coin={coin}
                          selectedPlayers={selectedPlayers}
+                         setselectedplayers={setselectedplayers}
+                         selectedplayers={selectedplayers}
                        
                           />
       
-                    ):( <Selected  selectedPlayers={selectedPlayers}
+                    ):( <Selected selectedplayers={selectedplayers} 
+                        setselectedplayers={setselectedplayers}
+                        setselecte={setselecte}
+                         setCoin={setCoin}
+                          coin={coin}
+                        
                     />)
                 }
 

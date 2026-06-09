@@ -1,14 +1,37 @@
 
 import React, { useState } from 'react';
 import { FaUser , FaFlag  } from "react-icons/fa"
+import { toast } from 'react-toastify';
 
 
-const Card = ({player, setCoin,coin ,selectedPlayers}) => {
-   const [isSelected, setIsSelected] = useState(false);
+
+
+const Card = ({player, setCoin,coin ,selectedPlayers, selectedplayers,setselectedplayers}) => {
+  const isAlreadySelected = selectedplayers.some(p => p.name === player.name);
+
 
    const handleplayer =()=>{
-         setIsSelected(true);
-        setCoin(coin-player.price)
+    if (isAlreadySelected) {
+           toast(`${player.name} already selected!`);
+           return;
+       }
+
+       let newcoin=coin-player.price
+         if(newcoin>=0){
+   setCoin(coin-player.price)
+      setselectedplayers([...selectedplayers, player]);
+     
+        toast(`${player.name} this player is select`)
+         }   
+         else{
+            toast.error("your coin is low")
+            return;
+         }  
+
+     
+ 
+
+       
    }
    
     return (
@@ -19,7 +42,7 @@ const Card = ({player, setCoin,coin ,selectedPlayers}) => {
           <figure>
          <img
       src={player.img}
-      alt="" />
+      alt=""  className='h-80' w-full/>
      </figure>
         <div className="card-body ">
             <div className='flex items-center  gap-1' > 
@@ -47,8 +70,9 @@ const Card = ({player, setCoin,coin ,selectedPlayers}) => {
 
       <div className="card-actions ">
           <p className='text-base font-bold '>price:${player.price}</p>
-      <button onClick={handleplayer} disabled ={isSelected}
-       className="btn  h-9"> {isSelected===true? "selected": "Choose Player"}  </button>
+      <button onClick={handleplayer} disabled ={isAlreadySelected}
+       className={`btn h-9 ${isAlreadySelected ? "bg-gray-400 text-white" : ""}`}>
+        {isAlreadySelected ? "Selected" : "Choose Player"}  </button>
     </div>
   </div>
 </div>

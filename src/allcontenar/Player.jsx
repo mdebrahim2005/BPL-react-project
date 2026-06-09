@@ -3,13 +3,14 @@ import React from 'react';
 import Card from './Card';
 
 
-const Player = ({playerpromis,coin, setCoin,selectedPlayers=[]}) => {
+const Player = ({playerpromis,coin, selectedplayers,setselectedplayers, 
+                   setCoin,selectedPlayers}) => {
   const players= use(playerpromis);
 
   console.log(players)
     return (
         <> 
-       <div className=' container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+       <div className=' container mx-auto mt-10  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2'>
 
           {
             players?.map((player) => {
@@ -19,6 +20,8 @@ const Player = ({playerpromis,coin, setCoin,selectedPlayers=[]}) => {
                 player={player} 
                 setCoin ={setCoin}
                 coin={coin}
+                selectedplayers={selectedplayers}
+                setselectedplayers={setselectedplayers}
                 
                 
                 />
@@ -37,4 +40,4 @@ const Player = ({playerpromis,coin, setCoin,selectedPlayers=[]}) => {
     );
 };
 
-export default Player;
+export default Player; 

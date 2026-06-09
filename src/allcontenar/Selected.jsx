@@ -1,45 +1,58 @@
 import React from 'react';
+import { FaUser } from 'react-icons/fa';
+import { RiDeleteBin6Line } from 'react-icons/ri';
 
-const Selected = ({ selectedPlayers, setselecte}) => {
+const Selected = ({ selectedplayers, setselectedplayers, setselecte,coin,setCoin }) => {
+    console.log(selectedplayers, "selectedplayers");
+     
+    const handeldelet = (playeres) => {
+          console.log(playeres, "player");
+          const filterplayer = selectedplayers.filter(selectedplayeres => selectedplayeres.name !== playeres.name);
+          console.log(filterplayer);
+          setselectedplayers(filterplayer);
+          setCoin(coin+ playeres.price)
+    };
+
     return (
         <div>
-           <div className="space-y-4">
-            {selectedPlayers.length === 0 ? (
-                <div className="text-center mt-10">
-                    <h2 className="text-xl font-bold text-gray-400">No players selected yet!</h2>
-                </div>
-            ) : (
-                selectedPlayers.map((player) => (
-                    <div key={player.id} className="flex justify-between items-center bg-white p-4 border border-gray-200 rounded-2xl shadow-sm">
-                        <div className="flex items-center gap-4">
-                            <img src={player.img} alt={player.name} className="w-16 h-16 object-cover rounded-xl bg-gray-100" />
-                            <div>
-                                <h3 className="text-lg font-bold">{player.name}</h3>
-                                <p className="text-gray-500 text-sm">{player.role}</p>
-                                <p className="text-black text-sm font-semibold">${player.price}</p>
-                            </div>
-                        </div>
-                        {/* ডিলিট বা রিমুভ করার বাটন */}
-                        <button 
-                            onClick={() => handleRemovePlayer(player.id)}
-                            className="btn btn-sm btn-ghost text-red-500 font-bold hover:bg-red-50"
-                        >
-                            ❌ Remove
-                        </button>
+            <div className='space-y-6'>
+              
+                {selectedplayers.length === 0 ? (
+                    <div className="text-center mt-10">
+                        <h2 className="text-xl font-bold text-gray-400">No players selected yet!</h2>
                     </div>
-                ))
-            )}
+                ) : (
+                    selectedplayers.map((playeres, index) => {
+                        return (
+                            <div key={index} className='flex items-center gap-6 justify-between rounded-2xl border-2 border-red-400 py-10'>
+                                <div className='flex items-center gap-2 pl-5'>
+                                    <img src={playeres.img} alt="" className='h-[70px] w-auto'/>
+                                    <div>
+                                        <h1 className='flex items-center gap-2 font-bold text-2xl'> 
+                                            <FaUser /> {playeres.name}
+                                        </h1>
+                                    </div>
+                                </div>
+                                <button 
+                                    className='btn text-red-500' 
+                                    onClick={() => handeldelet(playeres)}
+                                >
+                                    <RiDeleteBin6Line />
+                                </button>
+                            </div>
+                        );
+                    }) 
+                )}
+            </div>
 
-            {/* পেজের নিচে 'Add More Player' বাটন (ফিগমা অনুযায়ী) */}
-            <div className="pt-4">
+            <div className="mt-8">
                 <button 
                     onClick={() => setselecte("Available")} 
-                    className="btn bg-[#E7FE29] text-black font-bold rounded-xl border-none hover:bg-[#d4ea24]"
+                    className="btn bg-[#E7FE29] text-black font-bold px-5 py-3 rounded-xl border border-black shadow-sm"
                 >
                     Add More Player
                 </button>
             </div>
-        </div>
         </div>
     );
 };

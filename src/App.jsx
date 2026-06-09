@@ -4,6 +4,7 @@ import './App.css'
 import Banner  from './allcontenar/Banner'
 import Player from './allcontenar/Player'
 import AvilBtn from './allcontenar/AvilBtn'
+import { ToastContainer } from 'react-toastify'
 
 
 const playerdata = async ()=>{
@@ -29,7 +30,7 @@ function App() {
 
   // }
 
-  const [coin , setCoin]=useState(5000000)
+  const [coin , setCoin]=useState(1000000)
 
   
   return (
@@ -50,6 +51,8 @@ function App() {
       />
      
      </Suspense>
+
+       <ToastContainer />
      
      
     </>
